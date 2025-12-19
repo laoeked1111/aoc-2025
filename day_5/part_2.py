@@ -39,10 +39,8 @@ while  i < len(fresh_ids):
 
     i += 1
 
-num_fresh = 0
-for aid in available_ids:
-    for low, high in fresh_ids:
-        if low <= aid <= high:
-            num_fresh += 1
+total = 0
+for low, high in fresh_ids:
+    total += high - low + 1
 
-print(num_fresh)
+print(total)
